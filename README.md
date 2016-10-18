@@ -33,7 +33,7 @@ Iteration 7: 74927780 ns, or 74 ms
 Iteration 8: 74976930 ns, or 74 ms
 Iteration 9: 74900278 ns, or 74 ms
 Iteration 10: 74975469 ns, or 74 ms
-Thread.sleep average time: 74.20021940000001 ms
+RapidSleep.sleep average time: 74.20021940000001 ms
 ```
 
 Feel free to submit a pull request for improvements.
