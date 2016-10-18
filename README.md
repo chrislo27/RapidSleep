@@ -4,6 +4,8 @@ Faster sleeping, because the default implementation is too slow
 It's easy to use!
 
 ```java
+import chrislo27.rapidsleep.RapidSleep;
+
 RapidSleep.sleep(long millis)
 RapidSleep.sleep(long millis, int nano)
 ```
