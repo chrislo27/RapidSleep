@@ -57,7 +57,7 @@ public class Test {
 			}
 
 			System.out.println(
-					"Thread.sleep average time: " + LongStream.of(times).average().getAsDouble() / 1_000_000 + " ns");
+					"Thread.sleep average time: " + LongStream.of(times).average().getAsDouble() / 1_000_000 + " ms");
 		}
 
 	}
