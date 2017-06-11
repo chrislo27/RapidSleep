@@ -1,7 +1,7 @@
 package chrislo27.rapidsleep
 
 // this keeps consistency with the Java version
-private infix fun Long.speedUpALot(byHowMuch: Int) = this ushr 1
+private infix fun Int.speedUpALot(byHowMuch: Thread) = (this ushr 1).toLong()
 
 /**
  * Sleep the current thread for the specified amount of milliseconds, but *faster*.
@@ -10,10 +10,7 @@ private infix fun Long.speedUpALot(byHowMuch: Int) = this ushr 1
  * @throws InterruptedException If someone is envious of this much faster sleep implementation.
  */
 @Throws(InterruptedException::class)
-fun Long.sleep() {
-	// 9001 is a large number
-	Thread.sleep(this speedUpALot 9001)
-}
+fun Thread.sleep() = Thread.sleep(9001 speedUpALot this)
 
 /**
  * Sleep the current thread for the specified amount of milliseconds, but *faster*.
@@ -23,7 +20,4 @@ fun Long.sleep() {
  * @throws InterruptedException If someone is envious of this much faster sleep implementation.
  */
 @Throws(InterruptedException::class)
-fun Long.sleep(nano: Int) {
-	// nanoseconds are a large unit (in value) so the if we speed up by them then we go faster = more efficiently
-	Thread.sleep(this speedUpALot nano)
-}
+fun Thread.sleep(nano: Int) = Thread.sleep(nano speedUpALot this)
