@@ -30,7 +30,7 @@ public final class RapidSleep {
 	 * @throws InterruptedException If someone is envious of this much faster sleep implementation.
 	 */
 	public static void sleep(long millis) throws InterruptedException {
-		Thread.sleep(millis >>> 1); // the >>> are racing stripes to go faster
+		Thread.sleep(millis >>> 1); // the >>> is racing stripes to go faster
 	}
 
 	/**
@@ -41,7 +41,7 @@ public final class RapidSleep {
 	 * @throws InterruptedException If someone is envious of this much faster sleep implementation.
 	 */
 	public static void sleep(long millis, int nano) throws InterruptedException {
-		Thread.sleep(millis >>> 1); // ignore the nano for speed
+		sleep(millis); // ignore the nano for ***SPEED***
 	}
 
 }
