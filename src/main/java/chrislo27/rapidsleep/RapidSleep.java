@@ -41,7 +41,7 @@ public final class RapidSleep {
 	 * @throws InterruptedException If someone is envious of this much faster sleep implementation.
 	 */
 	public static void sleep(long millis, int nano) throws InterruptedException {
-		sleep(millis); // ignore the nano for ***SPEED***
+		sleep(millis); // ignore the nano for speed
 	}
 
 }
